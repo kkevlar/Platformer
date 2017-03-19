@@ -6,7 +6,12 @@ import com.flipturnapps.kevinLibrary.sprite.physics.PhysicsSprite;
 
 public class RedSprite extends PhysicsSprite 
 {
-
+	public RedSprite() 
+	{
+		super();
+		this.setObeyScrolling(true);
+		this.setAll(0, 400, 500, 100);
+	}
 
 	@Override
 	protected void drawShape(Graphics g, SpritePanel s, int x, int y, int width, int height)

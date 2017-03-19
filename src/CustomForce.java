@@ -5,8 +5,16 @@ public class CustomForce implements Force {
 
 	private double magnitude;
 	private double direction;
-	public CustomForce() {
-		// TODO Auto-generated constructor stub
+	private boolean enabled = false;
+	public CustomForce()
+	{
+		
+	}
+
+	public CustomForce(double dir, double mag)
+	{
+		this.setDirection(dir);
+		this.setMagnitude(mag);
 	}
 
 	@Override
@@ -33,6 +41,24 @@ public class CustomForce implements Force {
 
 	public void setDirection(double direction) {
 		this.direction = direction;
+	}
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public void disable() {
+		this.setEnabled(false);
+		
+	}
+
+	public void enable() {
+	this.setEnabled(true);
+		
 	}
 
 }
