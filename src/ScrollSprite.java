@@ -22,7 +22,12 @@ public class ScrollSprite extends DefaultScrollerPhysicsSprite
 		leftForce = new CustomForce(Force.DIR_LEFT, 1);
 		rightForce = new CustomForce(Force.DIR_RIGHT, 1);
 		
-		//need to add these
+		
+		this.add(leftForce);
+		this.add(rightForce);
+		
+		this.setxNormaled(false);
+		this.setyNormaled(false);
 	}
 
 	@Override
@@ -50,7 +55,7 @@ public class ScrollSprite extends DefaultScrollerPhysicsSprite
 
 	public void moveRight() 
 	{
-		leftForce.enable();	
+		rightForce.enable();	
 		
 	}
 

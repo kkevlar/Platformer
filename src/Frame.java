@@ -39,35 +39,39 @@ public class Frame extends KJFrame implements Runnable
 			e1.printStackTrace();
 		}
 		sprite.guessDimensions();
-		
-		
-		
+
+
+
 		sprite.moveToCenter();
+		///sprite.setNetVelMagnitude(.0x1);
+		//asprite.setNetVelDir(0);
+		System.out.println(sprite.getForces());
 		while(true)
 		{	
 			sprite.prep();
-				if(sPanel.upKeyDown())
-				{
-					
-					sprite.jump();
-					
-				}
-				if(sPanel.leftKeyDown())
-				{
-					sprite.moveLeft();
-					
-				}
-				if(sPanel.downKeyDown())
-				{
-					sprite.crouch();
-					
-				}
-				if(sPanel.rightKeyDown())
-				{
-					sprite.moveRight();
-					
-				}
-				
+			//sprite.moveLeft();
+			if(sPanel.upKeyDown())
+			{
+
+				sprite.jump();
+
+			}
+			if(sPanel.leftKeyDown())
+			{
+				sprite.moveLeft();
+
+			}
+			if(sPanel.downKeyDown())
+			{
+				sprite.crouch();
+
+			}
+			if(sPanel.rightKeyDown())
+			{
+				sprite.moveRight();
+
+			}
+
 			sprite.done();
 
 			sprite.update();

@@ -19,7 +19,10 @@ public class CustomForce implements Force {
 
 	@Override
 	public double getMagnitude(PhysicsSprite s) {
+			if(enabled)
 		return this.getMagnitude();
+		else
+			return 0;
 	}
 
 	@Override
@@ -59,6 +62,11 @@ public class CustomForce implements Force {
 	public void enable() {
 	this.setEnabled(true);
 		
+	}
+
+	@Override
+	public String toString() {
+		return "CustomForce [magnitude=" + magnitude + ", direction=" + direction + ", enabled=" + enabled + "]";
 	}
 
 }
